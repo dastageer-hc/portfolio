@@ -13,9 +13,9 @@ function HomePage() {
       </h1>
       <div>
 
-        <h6>
+        <h2>
           Website Under Construction....
-        </h6>
+        </h2>
       </div>
     </div>
 
