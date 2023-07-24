@@ -1,0 +1,48 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 45s ease infinite;
+  color: white
+}
+
+span.name {
+  font-size: 3rem;
+  color: orange
+}
+
+span.sub-text {
+  font-size: 3rem;
+  color: purple
+}
+
+.main h1 {
+  font-size: 3rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .main span.name {
+    font-size: 1.5rem !important;
+  }
+
+}
