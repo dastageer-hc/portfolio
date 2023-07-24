@@ -1,16 +1,66 @@
-import style from './HomePage.module.css'
+import style from './HomePage.module.css';
 function HomePage() {
   return (<>
+
     <div className={style.main}>
       <h1>
         <span className={style.name}>
-        Dastageer
+          Dastageer
         </span>.
         <span className={style?.['sub-text']}>
-          portfolio  
+          portfolio
         </span>
       </h1>
+      <div>
+
+        <h6>
+          Website Under Construction....
+        </h6>
+      </div>
     </div>
+
+    {/* <div className={style['glow-container']}>
+
+      <div class="glowing">
+
+        <span style={--i: 1}></span>
+
+        <span style="--i:2;"></span>
+
+        <span style="--i:3;"></span>
+
+      </div>
+
+      <div class="glowing">
+
+        <span style={--i: 1}></span>
+
+        <span style="--i:2;"></span>
+
+        <span style="--i:3;"></span>
+
+      </div>
+
+      <div class="glowing">
+
+        <span style={--i: 1}></span>
+
+        <span style="--i:2;"></span>
+
+        <span style="--i:3;"></span>
+
+      </div>
+
+      <div class="glowing">
+
+        <span style={--i: 1}></span>
+
+        <span style="--i:2;"></span>
+
+        <span style="--i:3;"></span>
+
+      </div>
+    </div> */}
   </>)
 }
 

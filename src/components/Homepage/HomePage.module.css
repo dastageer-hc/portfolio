@@ -3,6 +3,7 @@
   height: 100vh;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
@@ -41,7 +42,9 @@ span.sub-text {
 }
 
 @media screen and (max-width:500px) {
-  .main span.name {
+
+  .main span.name,
+  .main span.sub-text {
     font-size: 1.5rem !important;
   }
 
