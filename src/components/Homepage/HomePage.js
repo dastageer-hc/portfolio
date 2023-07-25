@@ -15,9 +15,8 @@ function HomePage() {
 
         <h2>
           Website Under Construction....
-          <br>
-            Hi Abhishek Bhai
-          </br>
+          <br />
+          Hi Abhishek Bhai
         </h2>
       </div>
     </div>
