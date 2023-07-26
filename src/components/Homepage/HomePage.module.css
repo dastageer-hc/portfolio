@@ -1,4 +1,4 @@
-/* .main {
+.main {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -39,7 +39,7 @@ span.sub-text {
 }
 
 
-
+/* 
 .wave {
   background: rgb(255 255 255 / 25%);
   border-radius: 1000% 1000% 0 0;
@@ -52,7 +52,7 @@ span.sub-text {
   bottom: 0;
   left: 0;
   z-index: 1;
-}
+} */
 
 .wave:nth-of-type(2) {
   bottom: -1.25em;
@@ -100,4 +100,4 @@ span.sub-text {
   100% {
     background-position: 0% 50%;
   }
-} */
+}
