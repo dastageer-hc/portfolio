@@ -22,6 +22,9 @@ function HomePage() {
           Website Under Construction....
         </h2>
 
+        <div className={style.imageContainer}>
+          <img src={require('../../assets/images/jcb.png')} style={{ width: "100px", height: "auto" }} alt='under-construction-image'></img>
+        </div>
       </div>
 
     </div>

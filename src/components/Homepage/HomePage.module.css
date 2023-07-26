@@ -58,6 +58,12 @@ span.sub-text {
   opacity: 0.9;
 }
 
+.imageContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @keyframes wave {
   2% {
     transform: translateX(1);
