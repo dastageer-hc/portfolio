@@ -31,8 +31,7 @@ span.sub-text {
 
 @media (max-width:500px) {
 
-  .main span.name,
-  .main span.sub-text {
+  .main span.name, .main span.sub-text {
     font-size: 1.5rem !important;
   }
 
@@ -57,7 +56,7 @@ span.sub-text {
 
 .wave:nth-of-type(2) {
   bottom: -1.25em;
-  animation: wave 18s linear reverse infinite ;
+  /* animation: wave 18s linear reverse infinite ; */
   opacity: 0.8;
 }
 
