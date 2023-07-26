@@ -3,6 +3,11 @@ function HomePage() {
   return (<>
 
     <div className={style.main}>
+      <div>
+        <div className={style.wave}></div>
+        <div className={style.wave}></div>
+        <div className={style.wave}></div>
+      </div>
       <h1>
         <span className={style.name}>
           Dastageer
@@ -18,6 +23,7 @@ function HomePage() {
         </h2>
 
       </div>
+
     </div>
 
     {/* <div className={style['glow-container']}>
