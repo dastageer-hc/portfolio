@@ -2,14 +2,14 @@ import style from './HomePage.module.css';
 function HomePage() {
   return (<>
 
-    <div className={style.main}>
+    <div className={style?.main}>
       <div>
-        <div className={style.wave}></div>
-        <div className={style.wave}></div>
-        <div className={style.wave}></div>
+        <div className={style?.wave}></div>
+        <div className={style?.wave}></div>
+        <div className={style?.wave}></div>
       </div>
       <h1>
-        <span className={style.name}>
+        <span className={style?.name}>
           Dastageer
         </span>.
         <span className={style?.['sub-text']}>
@@ -68,7 +68,7 @@ function HomePage() {
 
       </div>
     </div> */}
-  </>)
+  </>);
 }
 
 export default HomePage;
