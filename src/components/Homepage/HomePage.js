@@ -1,76 +1,34 @@
 import style from './HomePage.module.css';
 function HomePage() {
   return (<>
+    <div className={style.main_container}>
+      <div className={style.outer_border}>
+        <div className={style.card_container}>
+          <div className={style.bg_image}>
+            <img src={require('../../assets/images/headshot.jpg')} alt='profile pic'></img>
+          </div>
+          <div className={style.content_container}>
+            <div>
+              test lorem
+              test loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest lorem
+              test loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest lorem
+              test loremtest loremtest loremtest loremtest loremtest lorem
+              test loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest lorem
+              test loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest lorem
+              test loremtest loremtest loremtest loremtest loremtest lorem
+              test loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest lorem
+              test loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest lorem
+              test loremtest loremtest loremtest loremtest loremtest lorem
+              test loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest lorem
+              test loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest lorem
+              test loremtest loremtest loremtest loremtest loremtest lorem
+              test loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest loremtest lorem
 
-    <div className={style?.main}>
-      <div>
-        <div className={style?.wave}></div>
-        <div className={style?.wave}></div>
-        <div className={style?.wave}></div>
-      </div>
-      <h1>
-        <span className={style?.name}>
-          Dastageer
-        </span>.
-        <span className={style?.['sub-text']}>
-          portfolio
-        </span>
-      </h1>
-      <div>
-
-        <h2>
-          Website Under Construction....
-        </h2>
-
-        <div className={style.imageContainer}>
-          <img src={require('../../assets/images/jcb.png')} style={{ width: "100px", height: "auto" }} alt='under-construction-image'></img>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
-
-    {/* <div className={style['glow-container']}>
-
-      <div class="glowing">
-
-        <span style={--i: 1}></span>
-
-        <span style="--i:2;"></span>
-
-        <span style="--i:3;"></span>
-
-      </div>
-
-      <div class="glowing">
-
-        <span style={--i: 1}></span>
-
-        <span style="--i:2;"></span>
-
-        <span style="--i:3;"></span>
-
-      </div>
-
-      <div class="glowing">
-
-        <span style={--i: 1}></span>
-
-        <span style="--i:2;"></span>
-
-        <span style="--i:3;"></span>
-
-      </div>
-
-      <div class="glowing">
-
-        <span style={--i: 1}></span>
-
-        <span style="--i:2;"></span>
-
-        <span style="--i:3;"></span>
-
-      </div>
-    </div> */}
   </>);
 }
 
