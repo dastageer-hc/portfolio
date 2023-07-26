@@ -168,6 +168,7 @@
   .outer_border {
     width: 96vw;
     min-height: 200px;
+    max-height: 95vh;
     top: 2rem;
     padding: .5rem 0.2rem 0.5rem .2rem;
   }
