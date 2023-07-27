@@ -26,6 +26,59 @@
   padding: .8rem;
   background-color: rgba(255, 255, 255, 0.363);
   border: 1px solid blur(25px) saturate(200%);
+  /* --borderWidth: 3px; */
+  /* background: #1D1F20; */
+  /* position: relative; */
+  /* border-radius: var(--borderWidth); */
+}
+
+/* .outer_border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedGradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+  opacity: .5;
+  transform: scale(15);
+} */
+
+.outer_border:before,
+.outer_border:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094,
+      #0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.block:after {
+  filter: blur(50px);
 }
 
 .card_container {
@@ -100,7 +153,7 @@
 
 }
 
-.bg_image .glass_overlay::after {
+.bg_image .glass_overlay:after {
   content: '';
   width: 100%;
   height: 200%;
@@ -151,6 +204,20 @@
 }
 
 @keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes animatedGradient {
   0% {
     background-position: 0% 50%;
   }
