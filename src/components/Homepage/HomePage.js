@@ -1,4 +1,5 @@
 import style from './HomePage.module.css';
+import './HomePage.css'
 import { FaLinkedin, FaYoutube, FaInstagramSquare } from 'react-icons/fa'
 function HomePage() {
   return (<>
