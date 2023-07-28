@@ -30,6 +30,8 @@
   /* background: #1D1F20; */
   /* position: relative; */
   /* border-radius: var(--borderWidth); */
+  animation: animateIn .4s ease-in-out;
+  transform-origin: top;
 }
 
 /* .outer_border:after {
@@ -146,6 +148,7 @@
   flex-direction: column;
   z-index: 10;
   transform: translateY(-50%);
+  transform-origin: top 2rem;
   /* filter: drop-shadow(0px -18px 37px #FFFFFF); */
   /* background-color: white; */
 }
@@ -174,6 +177,19 @@
   border: 2px solid rgba(56, 248, 239, 0.295);
   width: 150px;
   border-radius: 50%;
+}
+
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem) translateX(-50%) scale(.9);
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%) scale(1);
+  }
 }
 
 @keyframes gradient {
