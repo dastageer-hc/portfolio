@@ -11,7 +11,7 @@ function HomePage() {
 
           </div>
           <div className={style.dp_container}>
-            <img src={require('../../assets/images/2.jpg')} alt='profile pic'></img>
+            <img src={require('../../assets/images/headshot2.jpg')} alt='profile pic'></img>
             <div className={style.header}>
               <h3 className={style?.['name-tag']}>
                 Dastageer HC
