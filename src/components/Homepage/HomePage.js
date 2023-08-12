@@ -22,7 +22,7 @@ function HomePage() {
             </div>
             <span className='mt-6 text-1xl'>
               •
-            </span>
+            </span> 
 
           </div>
           <div className={style.content_container}>
