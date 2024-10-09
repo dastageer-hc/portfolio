@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import {
   FaLinkedin,
@@ -41,20 +41,6 @@ function HomePage() {
 
   useEffect(() => {
     let isMounted = true;
-
-    const animateSpotlight = async () => {
-      while (isMounted) {
-        await spotlightControls.start({
-          opacity: [0.1, 0.3, 0.1],
-          scale: [1, 1.2, 1],
-          x: ["-50%", "150%", "-50%"],
-          y: ["-50%", "150%", "-50%"],
-          transition: { duration: 15, ease: "easeInOut" },
-        });
-      }
-    };
-
-    // animateSpotlight();
 
     return () => {
       isMounted = false;
@@ -168,7 +154,7 @@ function HomePage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 transform translate-y-[2px] group-hover:translate-y-0 transition-transform duration-300"></div>
+                  {/* <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 transform translate-y-[2px] group-hover:translate-y-0 transition-transform duration-300"></div> */}
                   <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 opacity-0 group-hover:opacity-70 blur-sm transition-opacity duration-300 animate-shimmer"></div>
                   <a
                     href={
