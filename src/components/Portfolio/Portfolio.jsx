@@ -16,7 +16,7 @@ const Portfolio = () => {
 
         const handleScroll = () => {
             setScrollY(window.scrollY);
-        };
+        }; 
 
         window.addEventListener('mousemove', handleMouseMove);
         window.addEventListener('scroll', handleScroll);
