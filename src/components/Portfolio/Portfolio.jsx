@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Code, Zap, ArrowRight, Copy, Check, Star, Sparkles, Globe, Users, Coffee } from 'lucide-react';
+import { Github, Linkedin, Mail, Code, Zap, ArrowRight, Copy, Check, Sparkles, Globe, Users, Coffee } from 'lucide-react';
 
 const Portfolio = () => {
     const [isVisible, setIsVisible] = useState(false);
