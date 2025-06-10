@@ -50,7 +50,7 @@ const Portfolio = () => {
         {
             title: 'Software Development Engineer 1 (Frontend)',
             company: 'GeoIQ',
-            period: 'December 2023 - May 2025',
+            period: 'December 2023 - Current',
             year: '2023-2025',
             type: 'Full-time',
             color: 'from-blue-500 to-purple-600',
@@ -530,7 +530,7 @@ const Portfolio = () => {
                             <div className="space-y-6">
                                 <h3 className="text-2xl font-bold text-white">Connect With Me</h3>
 
-                                <div className="grid gap-4">
+                                <div className="grid gap-4 ">
                                     <button
                                         onClick={() => copyToClipboard('https://github.com/dastageer-hc', 'github')}
                                         className="group flex items-center justify-between p-4 bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-105"
@@ -538,7 +538,7 @@ const Portfolio = () => {
                                         <div className="flex items-center space-x-4">
                                             <Github className="w-6 h-6 text-gray-300 group-hover:text-white" />
                                             <div className="text-left">
-                                                <h4 className="font-semibold text-white">GitHub</h4>
+                                                <h4 className="font-semibold text-white ">GitHub</h4>
                                                 <p className="text-gray-400 text-sm">Check out my repositories</p>
                                             </div>
                                         </div>
