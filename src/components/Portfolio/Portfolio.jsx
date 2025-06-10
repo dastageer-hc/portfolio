@@ -16,7 +16,7 @@ const Portfolio = () => {
 
         const handleScroll = () => {
             setScrollY(window.scrollY);
-        }; 
+        };
 
         window.addEventListener('mousemove', handleMouseMove);
         window.addEventListener('scroll', handleScroll);
@@ -191,8 +191,8 @@ const Portfolio = () => {
                             />
                             <div className="absolute inset-0 rounded-full pointer-events-none border-2 border-white/30" style={{ boxShadow: '0 0 0 6px rgba(255,255,255,0.10), 0 2px 16px 0 rgba(255,186,115,0.10)' }} />
                         </div>
-                        <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-orange-200 via-white to-purple-200 bg-clip-text text-transparent mb-5 h-[5rem]">Dastageer HC</h1>
-                        <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-full border border-blue-500/30 backdrop-blur-sm mb-6">
+                        <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-orange-200 via-white to-purple-200 bg-clip-text text-transparent mb-2 h-[4.5rem]">Dastageer HC</h1>
+                        <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-full border border-blue-500/30 backdrop-blur-sm mb-1">
                             <Sparkles className="w-4 h-4 mr-2 text-blue-400" />
                             <span className="text-sm text-blue-300">Available for new opportunities</span>
                         </div>
