@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Code, Zap, ArrowRight, Copy, Check, Sparkles, Globe, Users, Coffee, Phone, MessagesSquare } from 'lucide-react';
+import { Github, Linkedin, Mail, Code, Zap, ArrowRight, Copy, Check, Sparkles, Globe, Users, Coffee, Phone, MessagesSquare, Paintbrush } from 'lucide-react';
 
 const Portfolio = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [copiedItem, setCopiedItem] = useState(null);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [, setScrollY] = useState(0);
+    const [showCartoon, setShowCartoon] = useState(false);
+    const [shine, setShine] = useState(false);
 
     useEffect(() => {
         setIsVisible(true);
@@ -133,6 +135,16 @@ const Portfolio = () => {
         }
     ];
 
+    const handlePaintbrushClick = () => {
+        setShine(true);
+        setTimeout(() => {
+            setShowCartoon(v => !v);
+        }, 200); // swap image at midpoint of shine
+        setTimeout(() => {
+            setShine(false);
+        }, 600); // end shine
+    };
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden relative">
             {/* Animated Background Elements */}
@@ -178,17 +190,36 @@ const Portfolio = () => {
             <section className="min-h-screen flex items-center justify-center px-6 pt-20">
                 <div className={`max-w-4xl mx-auto text-center transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                     <div className="flex flex-col items-center mb-8">
-                        <div className="relative mb-4">
-                            <img
-                                src={require('../../assets/images/headshot.jpg')}
-                                alt="Dastageer HC headshot"
-                                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white/20 shadow-xl"
-                                style={{
-                                    filter: 'sepia(0.3)',
-                                    background: 'linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255, 186, 115, 0.2) 100%)',
-                                    boxShadow: '0 4px 32px 0 rgba(0,0,0,0.10), 0 0 0 8px rgba(255,255,255,0.10)'
-                                }}
-                            />
+                        <div className="relative mb-4 group">
+                            <div className="w-32 h-32 md:w-40 md:h-40 mx-auto relative">
+                                <img
+                                    src={showCartoon ? require('../../assets/images/cartoon.png') : require('../../assets/images/headshot.jpg')}
+                                    alt="Dastageer HC headshot"
+                                    className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white/20 shadow-xl absolute top-0 left-0"
+                                    style={{
+                                        filter: 'sepia(0.3)',
+                                        background: 'linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255, 186, 115, 0.2) 100%)',
+                                        boxShadow: '0 4px 32px 0 rgba(0,0,0,0.10), 0 0 0 8px rgba(255,255,255,0.10)',
+                                        transition: 'filter 0.3s'
+                                    }}
+                                />
+                                {/* Shine overlay */}
+                                {shine && (
+                                    <div className="absolute inset-0 rounded-full pointer-events-none overflow-hidden z-20">
+                                        <div className="shine-anim w-full h-full" />
+                                    </div>
+                                )}
+                            </div>
+                            {/* Paintbrush Button */}
+                            <button
+                                type="button"
+                                aria-label="Toggle Cartoon"
+                                onClick={handlePaintbrushClick}
+                                className="absolute -bottom-2 -right-2 md:-bottom-3 md:-right-3 z-10 p-2 rounded-full border border-white/40 bg-gradient-to-br from-orange-100/60 via-white/60 to-purple-100/60 shadow-lg backdrop-blur hover:scale-110 transition-all"
+                                style={{ boxShadow: '0 2px 8px 0 rgba(255,255,255,0.15), 0 1.5px 0 0 rgba(255,255,255,0.25) inset' }}
+                            >
+                                <Paintbrush className="w-5 h-5 text-white drop-shadow" />
+                            </button>
                             <div className="absolute inset-0 rounded-full pointer-events-none border-2 border-white/30" style={{ boxShadow: '0 0 0 6px rgba(255,255,255,0.10), 0 2px 16px 0 rgba(255,186,115,0.10)' }} />
                         </div>
                         <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-orange-200 via-white to-purple-200 bg-clip-text text-transparent mb-2 h-[4.5rem]">Dastageer HC</h1>
