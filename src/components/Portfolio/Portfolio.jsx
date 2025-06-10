@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Code, Zap, ArrowRight, Copy, Check, Sparkles, Globe, Users, Coffee, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail, Code, Zap, ArrowRight, Copy, Check, Sparkles, Globe, Users, Coffee, Phone, MessagesSquare } from 'lucide-react';
 
 const Portfolio = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -118,7 +118,7 @@ const Portfolio = () => {
         },
         {
             name: 'Tailwind CSS',
-            icon: 'https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/.github/logo-light.svg',
+            icon: 'https://cdn.jsdelivr.net/gh/jcamp-code/tailwindcss-plugin-icons@master/.github/tailwindcss-mark.svg',
             color: 'from-cyan-400 to-blue-500'
         },
         {
@@ -439,7 +439,7 @@ const Portfolio = () => {
             <section id="projects" className="py-20 px-6">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent h-[3.5rem]">
                             Projects
                         </h2>
                         <p className="text-xl text-gray-300 mb-8">
@@ -491,7 +491,7 @@ const Portfolio = () => {
             <section id="contact" className="py-20 px-6">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent h-[3.5rem]">
                             Let's Work Together
                         </h2>
                         <p className="text-xl text-gray-300">
@@ -530,28 +530,43 @@ const Portfolio = () => {
                             <div className="space-y-6">
                                 <h3 className="text-2xl font-bold text-white">Connect With Me</h3>
 
-                                <div className="grid gap-4 ">
-                                    <button
-                                        onClick={() => copyToClipboard('https://github.com/dastageer-hc', 'github')}
-                                        className="group flex items-center justify-between p-4 bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-105"
+                                <div className="grid gap-4">
+                                    {/* GitHub Card */}
+                                    <div
+                                        onClick={() => window.open('https://github.com/dastageer-hc', '_blank', 'noopener,noreferrer')}
+                                        className="group flex items-center justify-between p-4 bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+                                        tabIndex={0}
+                                        role="button"
+                                        onKeyDown={e => { if (e.key === 'Enter') window.open('https://github.com/dastageer-hc', '_blank', 'noopener,noreferrer'); }}
                                     >
                                         <div className="flex items-center space-x-4">
                                             <Github className="w-6 h-6 text-gray-300 group-hover:text-white" />
                                             <div className="text-left">
-                                                <h4 className="font-semibold text-white ">GitHub</h4>
+                                                <h4 className="font-semibold text-white">GitHub</h4>
                                                 <p className="text-gray-400 text-sm">Check out my repositories</p>
                                             </div>
                                         </div>
-                                        {copiedItem === 'github' ? (
-                                            <Check className="w-5 h-5 text-green-400" />
-                                        ) : (
-                                            <Copy className="w-5 h-5 text-gray-400 group-hover:text-white" />
-                                        )}
-                                    </button>
-
-                                    <button
-                                        onClick={() => copyToClipboard('https://www.linkedin.com/in/dastageer-hc/', 'linkedin')}
-                                        className="group flex items-center justify-between p-4 bg-gradient-to-r from-blue-800/30 to-blue-900/30 rounded-xl border border-blue-700/50 hover:border-blue-600/50 transition-all duration-300 hover:scale-105"
+                                        <span
+                                            onClick={e => { e.stopPropagation(); copyToClipboard('https://github.com/dastageer-hc', 'github'); }}
+                                            className="cursor-pointer"
+                                            tabIndex={0}
+                                            role="button"
+                                            onKeyDown={e => { e.stopPropagation(); if (e.key === 'Enter') copyToClipboard('https://github.com/dastageer-hc', 'github'); }}
+                                        >
+                                            {copiedItem === 'github' ? (
+                                                <Check className="w-5 h-5 text-green-400" />
+                                            ) : (
+                                                <Copy className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                                            )}
+                                        </span>
+                                    </div>
+                                    {/* LinkedIn Card */}
+                                    <div
+                                        onClick={() => window.open('https://www.linkedin.com/in/dastageer-hc/', '_blank', 'noopener,noreferrer')}
+                                        className="group flex items-center justify-between p-4 bg-gradient-to-r from-blue-800/30 to-blue-900/30 rounded-xl border border-blue-700/50 hover:border-blue-600/50 transition-all duration-300 hover:scale-105 cursor-pointer"
+                                        tabIndex={0}
+                                        role="button"
+                                        onKeyDown={e => { if (e.key === 'Enter') window.open('https://www.linkedin.com/in/dastageer-hc/', '_blank', 'noopener,noreferrer'); }}
                                     >
                                         <div className="flex items-center space-x-4">
                                             <Linkedin className="w-6 h-6 text-blue-400 group-hover:text-blue-300" />
@@ -560,23 +575,32 @@ const Portfolio = () => {
                                                 <p className="text-gray-400 text-sm">Let's connect professionally</p>
                                             </div>
                                         </div>
-                                        {copiedItem === 'linkedin' ? (
-                                            <Check className="w-5 h-5 text-green-400" />
-                                        ) : (
-                                            <Copy className="w-5 h-5 text-gray-400 group-hover:text-white" />
-                                        )}
-                                    </button>
-
-                                    <div className="group flex items-center justify-between p-4 bg-gradient-to-r from-purple-800/30 to-purple-900/30 rounded-xl border border-purple-700/50 hover:border-purple-600/50 transition-all duration-300 hover:scale-105">
-                                        <div className="flex items-center space-x-4">
-                                            <Mail className="w-6 h-6 text-purple-400 group-hover:text-purpleF-300" />
-                                            <div className="text-left">
-                                                <h4 className="font-semibold text-white">Quick Response</h4>
-                                                <p className="text-gray-400 text-sm">I typically respond within 24 hours</p>
-                                            </div>
-                                        </div>
-                                        <Sparkles className="w-5 h-5 text-purple-400 group-hover:text-purple-300" />
+                                        <span
+                                            onClick={e => { e.stopPropagation(); copyToClipboard('https://www.linkedin.com/in/dastageer-hc/', 'linkedin'); }}
+                                            className="cursor-pointer"
+                                            tabIndex={0}
+                                            role="button"
+                                            onKeyDown={e => { e.stopPropagation(); if (e.key === 'Enter') copyToClipboard('https://www.linkedin.com/in/dastageer-hc/', 'linkedin'); }}
+                                        >
+                                            {copiedItem === 'linkedin' ? (
+                                                <Check className="w-5 h-5 text-green-400" />
+                                            ) : (
+                                                <Copy className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                                            )}
+                                        </span>
                                     </div>
+                                </div>
+
+                                {/* Quick Response Section */}
+                                <div className="group flex items-center justify-between p-4 bg-gradient-to-r from-purple-800/30 to-purple-900/30 rounded-xl border border-purple-700/50 hover:border-purple-600/50 transition-all duration-300 hover:scale-105 mt-4">
+                                    <div className="flex items-center space-x-4">
+                                        <MessagesSquare className="w-6 h-6 text-purple-400 group-hover:text-purple-300" />
+                                        <div className="text-left">
+                                            <h4 className="font-semibold text-white">Quick Response</h4>
+                                            <p className="text-gray-400 text-sm">I typically respond within 24 hours</p>
+                                        </div>
+                                    </div>
+                                    <Sparkles className="w-5 h-5 text-purple-400 group-hover:text-purple-300" />
                                 </div>
                             </div>
                         </div>
