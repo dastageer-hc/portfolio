@@ -215,7 +215,7 @@ const Portfolio = () => {
                                 type="button"
                                 aria-label="Toggle Cartoon"
                                 onClick={handlePaintbrushClick}
-                                className="absolute -bottom-2 -right-2 md:-bottom-3 md:-right-3 z-10 p-2 rounded-full border border-white/40 bg-gradient-to-br from-orange-100/60 via-white/60 to-purple-100/60 shadow-lg backdrop-blur hover:scale-110 transition-all"
+                                className="absolute -bottom-2 -right-2 md:-bottom-3 md:-right-3 z-10 p-2 rounded-full border hidden  border-white/40 bg-gradient-to-br from-orange-100/60 via-white/60 to-purple-100/60 shadow-lg backdrop-blur hover:scale-110 transition-all"
                                 style={{ boxShadow: '0 2px 8px 0 rgba(255,255,255,0.15), 0 1.5px 0 0 rgba(255,255,255,0.25) inset' }}
                             >
                                 <Paintbrush className="w-5 h-5 text-white drop-shadow" />
