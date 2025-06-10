@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Code, Zap, ArrowRight, Copy, Check, Sparkles, Globe, Users, Coffee } from 'lucide-react';
+import { Github, Linkedin, Mail, Code, Zap, ArrowRight, Copy, Check, Sparkles, Globe, Users, Coffee, Phone } from 'lucide-react';
 
 const Portfolio = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -518,7 +518,7 @@ const Portfolio = () => {
                                     </div>
 
                                     <div className="flex items-center space-x-4 p-4 bg-gradient-to-r from-emerald-500/10 to-teal-600/10 rounded-xl border border-emerald-500/20">
-                                        <Globe className="w-6 h-6 text-emerald-400" />
+                                        <Phone className="w-6 h-6 text-emerald-400" />
                                         <div>
                                             <h4 className="font-semibold text-white">Phone</h4>
                                             <p className="text-gray-400">+91 9980973613</p>
@@ -626,7 +626,7 @@ const Portfolio = () => {
 
                     <div className="mt-8 pt-8 border-t border-white/10">
                         <p className="text-gray-500 text-sm">
-                            © 2024 Frontend Developer Portfolio. Built with React & Tailwind CSS.
+                            © 2025 Crafted with ❤️ By Dastageer HC. Built with React & Tailwind CSS.
                         </p>
                     </div>
                 </div>
