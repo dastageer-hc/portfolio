@@ -656,6 +656,17 @@ const Portfolio = () => {
                     </p>
 
                     <div className="flex justify-center space-x-6">
+                       
+                        <button
+                            onClick={() => copyToClipboard('https://www.linkedin.com/in/dastageer-hc/', 'linkedin')}
+                            className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
+                        >
+                            {copiedItem === 'linkedin' ? (
+                                <Check className="w-5 h-5 text-green-400" />
+                            ) : (
+                                <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                            )}
+                        </button>
                         <button
                             onClick={() => copyToClipboard('https://github.com/dastageer-hc', 'github')}
                             className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
@@ -667,16 +678,6 @@ const Portfolio = () => {
                             )}
                         </button>
 
-                        <button
-                            onClick={() => copyToClipboard('https://www.linkedin.com/in/dastageer-hc/', 'linkedin')}
-                            className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
-                        >
-                            {copiedItem === 'linkedin' ? (
-                                <Check className="w-5 h-5 text-green-400" />
-                            ) : (
-                                <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-white" />
-                            )}
-                        </button>
                     </div>
 
                     <div className="mt-8 pt-8 border-t border-white/10">
